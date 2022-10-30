@@ -5,7 +5,7 @@ occupation: Information Assurance Student
 company: FPT University
 email: hkphu.edu@gmail.com
 # twitter: https://twitter.com/Twitter
-linkedin: https://www.linkedin.com/in/ho%C3%A0ng-kim-ph%C3%BA-21a22017a
+linkedin: https://www.linkedin.com/in/hoangkimphu
 github: https://github.com/w4rf0t
 ---
 
