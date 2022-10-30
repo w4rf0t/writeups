@@ -1,3 +1,0 @@
-# Reminiscent Writeups
-
-image.png

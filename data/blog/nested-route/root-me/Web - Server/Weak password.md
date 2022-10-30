@@ -1,3 +1,11 @@
+---
+title: Weak password
+date: '2022-08-31'
+tags: ['root-me', 'writeups','web','server','weakpassword']
+draft: false
+summary: Writeup of Weak password challenges.
+---
+
 #Bài này có rất nhiều cách:
 
 **Option1, test thử account 1 phát ăn luôn**

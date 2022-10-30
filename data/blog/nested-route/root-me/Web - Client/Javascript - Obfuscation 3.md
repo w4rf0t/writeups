@@ -1,3 +1,11 @@
+---
+title: Javascript - Obfuscation 3
+date: '2022-08-31'
+tags: ['javascript', 'root-me', 'writeups','web','client','obfucation']
+draft: false
+summary: Writeup of Javascript - Obfuscation 3 challenges.
+---
+
 **Mở ra thấy hiện alert**
 
 ![image](https://user-images.githubusercontent.com/61643034/187150729-ed8118ce-7d36-40ea-b939-60758090515f.png)
