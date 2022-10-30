@@ -16,3 +16,5 @@ github: https://github.com/w4rf0t
 👨‍💻 I'm a Information Assurance Student (3rd) at FPT University.
 
 💻 I like playing ctf and pentesting. Then I write-up them in here.
+
+📄 Here're my [Curriculum Vitae](https://www.canva.com/design/DAEoHtXtFUA/xCkblC-Eg3Rck3SCPvtv5g/view?utm_content=DAEoHtXtFUA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
