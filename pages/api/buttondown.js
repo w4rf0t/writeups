@@ -7,7 +7,7 @@ export default async (req, res) => {
 
   try {
     const API_KEY = `3282d8df-0ab3-4ffa-a0e2-1c01a46791c1`
-    const buttondownRoute = `https://api.buttondown.email/v1/subscribers/`
+    const buttondownRoute = `https://api.buttondown.email/v1/subscribers`
     const response = await fetch(buttondownRoute, {
       body: JSON.stringify({
         email,
