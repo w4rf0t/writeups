@@ -52,13 +52,6 @@ const securityHeaders = [
   },
 ]
 
-module.exports = {
-    experimental: {
-        images: {
-            unoptimized: true
-        }
-    }
-}
 
 module.exports = withBundleAnalyzer({
   reactStrictMode: true,
