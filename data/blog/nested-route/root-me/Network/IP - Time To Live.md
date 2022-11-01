@@ -10,6 +10,6 @@ Link: https://www.root-me.org/en/Challenges/Network/IP-Time-To-Live
 
 Open file by using **WIRESHARK** then search for string **TTL** 
 
-[anh](https://user-images.githubusercontent.com/61643034/187824277-bacc38a7-5306-47ba-9e6d-4e2100cb54a0.png)
+![image](https://user-images.githubusercontent.com/61643034/187824277-bacc38a7-5306-47ba-9e6d-4e2100cb54a0.png)
 
 As we can see, the final request to target has **TTL Value** is ```13```

@@ -12,10 +12,10 @@ In this problem, we will download the **pcap** file, then open it by **WIRESHARK
 
 Having searched the keyword "PASS", finally I found somethings exciting. 😆
 
-[matkhau](https://user-images.githubusercontent.com/61643034/187702735-57d58e75-820d-4dbf-ba71-3c65cc132eb6.png)
+![image](https://user-images.githubusercontent.com/61643034/187702735-57d58e75-820d-4dbf-ba71-3c65cc132eb6.png)
 Here, you guys can see the passwd is ```cdts3500 ```
 
 
 Or u guy can choose Follow -> TCP Stream:
 
-[anh](https://user-images.githubusercontent.com/61643034/187710606-15e237b4-f586-4bf6-ad22-55530a3b5cf3.png)
+![image](https://user-images.githubusercontent.com/61643034/187710606-15e237b4-f586-4bf6-ad22-55530a3b5cf3.png)
