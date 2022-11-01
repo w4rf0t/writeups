@@ -17,8 +17,6 @@ author: ['default']
 
 <img alt="packet" src="https://user-images.githubusercontent.com/61643034/199155885-bef30e28-d04c-47ff-be84-b984c86b1829.png" height={200} />
 
-<!-- ![image](https://user-images.githubusercontent.com/61643034/199155885-bef30e28-d04c-47ff-be84-b984c86b1829.png) -->
-
 - Trace the path to the Web Server from PC-B.
 
 ![image](https://user-images.githubusercontent.com/61643034/199156381-47ecd085-9bfc-4dae-b955-3e6600c79003.png)
