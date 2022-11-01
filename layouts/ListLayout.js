@@ -1,16 +1,11 @@
-// import Link from '@/components/Link'
-// import Tag from '@/components/Tag'
-// import siteMetadata from '@/data/siteMetadata'
-// import { useState } from 'react'
-// import Image from 'next/image'
-// import Pagination from '@/components/Pagination'
-// import formatDate from '@/lib/utils/formatDate'
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
+import siteMetadata from '@/data/siteMetadata'
 import { useState } from 'react'
-import Pagination from '@/components/Pagination'
 import Image from 'next/image'
-import Article from '@/components/Article'
+import Pagination from '@/components/Pagination'
+import formatDate from '@/lib/utils/formatDate'
+
 
 export default function ListLayout({ posts, title, initialDisplayPosts = [], pagination }) {
   const [searchValue, setSearchValue] = useState('')
