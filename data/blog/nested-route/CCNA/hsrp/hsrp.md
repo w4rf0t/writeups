@@ -15,7 +15,8 @@ author: ['default']
 
 - Trace the path to the Web Server from PC-A.
 
-<Image alt="packet" src="https://user-images.githubusercontent.com/61643034/199155885-bef30e28-d04c-47ff-be84-b984c86b1829.png" height={200} />
+<img alt="packet" src="https://user-images.githubusercontent.com/61643034/199155885-bef30e28-d04c-47ff-be84-b984c86b1829.png" height={200} />
+
 ![image](https://user-images.githubusercontent.com/61643034/199155885-bef30e28-d04c-47ff-be84-b984c86b1829.png)
 
 - Trace the path to the Web Server from PC-B.
