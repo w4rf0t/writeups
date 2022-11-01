@@ -45,7 +45,7 @@ summary: Writeups cua Lab cấu hình HSRP.
 
     - Priority default of R3 is 100
     
-****I choose the gateway 192.168.1.254 for all of PC-A, PC-B, S1, S3 👌 And of course, both of PC-A & PC-B can ping to WEB Server****
+***I choose the gateway 192.168.1.254 for all of PC-A, PC-B, S1, S3 👌 And of course, both of PC-A & PC-B can ping to WEB Server***
 
 
 **Part 3: Observe HSRP Operationy**
