@@ -8,7 +8,7 @@ summary: Writeup of LDAP - null Bind file challenges.
 
 # Option 1: ldapadmin
 
-[ldapadmin](https://user-images.githubusercontent.com/61643034/187846896-7d000d04-4ef4-4bab-b3d7-a45d2699eea6.png)
+![image](https://user-images.githubusercontent.com/61643034/187846896-7d000d04-4ef4-4bab-b3d7-a45d2699eea6.png)
 
 
 

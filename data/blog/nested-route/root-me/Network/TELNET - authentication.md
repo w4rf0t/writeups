@@ -12,5 +12,5 @@ After downloaded file and opened it, we can see the log of sessions telnet
 
 Follow -> TCP Stream, we got:
 
-[imasadge](https://user-images.githubusercontent.com/61643034/187710109-9c7d01a4-2b60-40bc-92cc-daefeb50afcd.png)
+[image](https://user-images.githubusercontent.com/61643034/187710109-9c7d01a4-2b60-40bc-92cc-daefeb50afcd.png)
 Pass is: ```user```
