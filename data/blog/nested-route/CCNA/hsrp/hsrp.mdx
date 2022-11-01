@@ -50,12 +50,17 @@ images: ['/static/images/ccna/cisco.jpg']
 
 **Part 3: Observe HSRP Operationy**
 
-- Make the active router become unavailable.
+- Make the active router become unavailable. The path now passes through R1 instead of R3.
     
+![image](https://user-images.githubusercontent.com/61643034/199172415-7bf25f24-4224-4cc6-bb5e-11cea8c82112.png)
 
-- Break the link to R1
+- Break the link to R1. After delete the cable that connects R1 to S1, the path passes through R3.
+   
+![image](https://user-images.githubusercontent.com/61643034/199172701-88940c37-6a75-4092-8b16-89314f5caee7.png)
 
 
-- Restore the link to R1.
+- Restore the link to R1. After add interface Gi0/2 at S1 and Gi0/1 at R1 and fast forward time. We trace PC-B for the last time. And booms 💣💥
 
+![image](https://user-images.githubusercontent.com/61643034/199174028-7c2d37bf-d621-409c-a0b2-c6207e6d6cda.png)
 
+        It returns to pass through R1.
