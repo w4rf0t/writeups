@@ -26,7 +26,6 @@ summary: Writeups cua Lab cấu hình HSRP.
 
     - When trace again by PC-B, it returns request time out
         
-        
 ![image](https://user-images.githubusercontent.com/61643034/199157015-8b21b9b6-f4bb-4ad4-9b9a-8eb0c08f242a.png)
 
     - Then reconnect S3 and R3
