@@ -16,7 +16,7 @@ const Giscus = () => {
   const COMMENTS_ID = 'comments-container'
 
   const LoadComments = useCallback(() => {
-    setEnabledLoadComments(false)
+    setEnabledLoadComments(true)
 
     const {
       repo,
