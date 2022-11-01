@@ -54,7 +54,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
             </svg>
           </div>
         </div>
-        {/* <ul>
+        <ul>
           {!filteredBlogPosts.length && 'No posts found.'}
           {displayPosts.map((frontMatter) => {
             const { slug, date, title, summary, tags } = frontMatter
@@ -88,19 +88,6 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
               </li>
             )
           })}
-        </ul> */}
-        <ul>
-          {!filteredBlogPosts.length && 'No posts found.'}
-          {displayPosts.map((frontMatter) => (
-            <li key={frontMatter.slug} className="py-4">
-              <Article
-                {...frontMatter}
-                image={frontMatter.images[0]}
-                hasExtraLink={false}
-                isH2={false}
-              />
-            </li>
-          ))}
         </ul>
       </div>
       {pagination && pagination.totalPages > 1 && !searchValue && (
