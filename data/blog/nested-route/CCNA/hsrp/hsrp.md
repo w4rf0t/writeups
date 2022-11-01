@@ -9,7 +9,7 @@ author: ['default']
 ---
 
 ![image](https://user-images.githubusercontent.com/61643034/199156830-2676bafc-6d0e-4471-bef2-b4fc6a88dd3a.png)
-[Instructions And Lab here](https://github.com/w4rf0t/writeups/blob/main/data/blog/nested-route/CCNA/hsrp/labtest.pka)
+[Instructions And Lab here](https://github.com/w4rf0t/writeups/blob/main/data/labs/labtest.pka)
 
 **Part 1: Verify Connectivity**
 
