@@ -8,7 +8,7 @@ const Disqus = ({ frontMatter }) => {
   const COMMENTS_ID = 'disqus_thread'
 
   function LoadComments() {
-    setEnabledLoadComments(true)
+    setEnabledLoadComments(false)
 
     window.disqus_config = function () {
       this.page.url = window.location.href

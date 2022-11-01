@@ -41,7 +41,7 @@ const siteMetadata = {
     giscusConfig: {
       // Visit the link below, and follow the steps in the 'configuration' section
       // https://giscus.app/
-      repo: 'w4rf0t/writeups',
+      repo: 'w4rf0t/w4rf0t.github.io',
       repositoryId: 'R_kgDOIVg1Zg',
       category: 'General',
       categoryId: 'DIC_kwDOIVg1Zs4CSRgO',
