@@ -18,7 +18,8 @@ export default function Repo({ pinnedItems }) {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
-        <p className={styles.description}>Get started by editing{' '}
+        <p className={styles.description}>
+        Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
         </p>
 
@@ -26,7 +27,7 @@ export default function Repo({ pinnedItems }) {
           {pinnedItems.map((item) => {
             return (
               <a key={item.id} href={item.url} className={styles.card}>
-                <h2>{item.name }</h2>
+                <h2>{item.name}</h2>
                 <p>⭐ {item.stargazers.totalCount}</p>
               </a>
             )
@@ -40,7 +41,7 @@ export default function Repo({ pinnedItems }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}<span>Hehe</span>
+          Powered by <span>Hehe</span>
         </a>
       </footer>
     </div>
