@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import {ApolloClient, createHttpLink, InMemoryCache, gql} from "@apollo/client"
-import {setContext} from '@apollo/client/link/context'
+// import Image from 'next/image'
+import { ApolloClient, createHttpLink, InMemoryCache, gql } from '@apollo/client'
+import { setContext } from '@apollo/client/link/context'
 import styles from '../css/Home.module.css'
 
 export default function Repo({ pinnedItems }) {
@@ -18,8 +18,7 @@ export default function Repo({ pinnedItems }) {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
+        <p className={styles.description}>Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
         </p>
 
@@ -41,10 +40,7 @@ export default function Repo({ pinnedItems }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <span>
-            Hehe
-          </span>
+          Powered by{' '}<span>Hehe</span>
         </a>
       </footer>
     </div>
@@ -54,23 +50,23 @@ export default function Repo({ pinnedItems }) {
 export async function getStaticProps() {
   const httpLink = createHttpLink({
     uri: 'https://api.github.com/graphql',
-  });
+  })
 
   const authLink = setContext((_, { headers }) => {
     return {
       headers: {
         ...headers,
         authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
-      }
+      },
     }
   })
 
   const client = new ApolloClient({
     link: authLink.concat(httpLink),
-    cache: new InMemoryCache()
+    cache: new InMemoryCache(),
   })
 
-  const {data} = await client.query({
+  const { data } = await client.query({
     query: gql`
       {
         user(login: "w4rf0t") {
@@ -91,15 +87,11 @@ export async function getStaticProps() {
           }
         }
       }
-    `
-  });
+    `,
+  })
 
-  const {user} = data
+  const { user } = data
   const pinnedItems = user.pinnedItems.edges.map((edge) => edge.node)
 
-  return {
-    props: {
-      pinnedItems
-    }
-  }
+  return { props: { pinnedItems } }
 }
