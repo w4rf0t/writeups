@@ -120,9 +120,9 @@
 // }
 import Head from 'next/head'
 import Image from 'next/image'
-import { ApolloClient, createHttpLink, InMemoryCache, gql } from "@apollo/client";
-import { setContext } from '@apollo/client/link/context';
-import styles from '../styles/Home.module.css'
+import { ApolloClient, createHttpLink, InMemoryCache, gql } from '@apollo/client'
+import { setContext } from '@apollo/client/link/context'
+import styles from '../css/Home.module.css'
 
 export default function Home({ pinnedItems }) {
   return (
@@ -139,16 +139,16 @@ export default function Home({ pinnedItems }) {
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
+          Get started by editing{''}
           <code className={styles.code}>pages/index.js</code>
         </p>
 
         <div className={styles.grid}>
-          {pinnedItems.map(item => {
+          {pinnedItems.map((item) => {
             return (
               <a key={item.id} href={item.url} className={styles.card}>
-                <h2>{ item.name }</h2>
-                <p>⭐ {item.stargazers.totalCount }</p>
+                <h2>{item.name}</h2>
+                <p>⭐ {item.stargazers.totalCount}</p>
               </a>
             )
           })}
@@ -174,21 +174,21 @@ export default function Home({ pinnedItems }) {
 export async function getStaticProps() {
   const httpLink = createHttpLink({
     uri: 'https://api.github.com/graphql',
-  });
+  })
 
   const authLink = setContext((_, { headers }) => {
     return {
       headers: {
         ...headers,
         authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
-      }
+      },
     }
-  });
+  })
 
   const client = new ApolloClient({
     link: authLink.concat(httpLink),
-    cache: new InMemoryCache()
-  });
+    cache: new InMemoryCache(),
+  })
 
   const { data } = await client.query({
     query: gql`
@@ -211,15 +211,15 @@ export async function getStaticProps() {
           }
         }
       }
-    `
-  });
+    `,
+  })
 
-  const { user } = data;
-  const pinnedItems = user.pinnedItems.edges.map(edge => edge.node);
+  const { user } = data
+  const pinnedItems = user.pinnedItems.edges.map((edge) => edge.node)
 
   return {
     props: {
-      pinnedItems
-    }
+      pinnedItems,
+    },
   }
 }
