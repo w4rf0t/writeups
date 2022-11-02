@@ -4,7 +4,7 @@ date: '2022-11-1'
 tags: ['ccna', 'hsrp', 'cisco','packet tracer']
 draft: false
 summary: Writeups cua Lab cấu hình HSRP.
-images: ['/static/images/ccna/cisco.jpg']
+images: /static/images/ccna/cisco.jpg
 author: ['default']
 ---
 
