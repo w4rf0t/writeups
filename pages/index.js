@@ -32,10 +32,41 @@ export async function getStaticProps() {
     cache: new InMemoryCache(),
   })
 
+  const { data } = await client.query({
+    query: gql`
+      {
+        user(login: "w4rf0t") {
+          pinnedItems(first: 6, types: [REPOSITORY]) {
+            totalCount
+            edges {
+              node {
+                ... on Repository {
+                  name
+                  id
+                  url
+                  stargazers {
+                    totalCount
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    `,
+  })
+
+  const { user } = data
+  const pinnedItems = user.pinnedItems.edges.map((edge) => edge.node)
   const posts = await getAllFilesFrontMatter('blog')
 
-  return { props: { posts } }
+  return {
+    props: {
+      pinnedItems, posts
+    },
+  }
 }
+
 
 export default function Home({ posts }) {
   return (
@@ -143,55 +174,3 @@ export default function Home({ posts }) {
   )
 }
 
-export async function getStaticProps() {
-  const httpLink = createHttpLink({
-    uri: 'https://api.github.com/graphql',
-  })
-
-  const authLink = setContext((_, { headers }) => {
-    return {
-      headers: {
-        ...headers,
-        authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
-      },
-    }
-  })
-
-  const client = new ApolloClient({
-    link: authLink.concat(httpLink),
-    cache: new InMemoryCache(),
-  })
-
-  const { data } = await client.query({
-    query: gql`
-      {
-        user(login: "w4rf0t") {
-          pinnedItems(first: 6, types: [REPOSITORY]) {
-            totalCount
-            edges {
-              node {
-                ... on Repository {
-                  name
-                  id
-                  url
-                  stargazers {
-                    totalCount
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    `,
-  })
-
-  const { user } = data
-  const pinnedItems = user.pinnedItems.edges.map((edge) => edge.node)
-
-  return {
-    props: {
-      pinnedItems,
-    },
-  }
-}
