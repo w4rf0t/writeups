@@ -5,68 +5,16 @@ import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
 import NewsletterForm from '@/components/NewsletterForm'
-import Head from 'next/head'
-import Image from 'next/image'
 import { ApolloClient, createHttpLink, InMemoryCache, gql } from '@apollo/client'
 import { setContext } from '@apollo/client/link/context'
-import styles from '../css/Home.module.css'
 
-const MAX_DISPLAY = 5
+const MAX_DISPLAY = 6
 
 export async function getStaticProps() {
-  const httpLink = createHttpLink({
-    uri: 'https://api.github.com/graphql',
-  })
-
-  const authLink = setContext((_, { headers }) => {
-    return {
-      headers: {
-        ...headers,
-        authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
-      },
-    }
-  })
-
-  const client = new ApolloClient({
-    link: authLink.concat(httpLink),
-    cache: new InMemoryCache(),
-  })
-
-  const { data } = await client.query({
-    query: gql`
-      {
-        user(login: "w4rf0t") {
-          pinnedItems(first: 6, types: [REPOSITORY]) {
-            totalCount
-            edges {
-              node {
-                ... on Repository {
-                  name
-                  id
-                  url
-                  stargazers {
-                    totalCount
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    `,
-  })
-
-  const { user } = data
-  const pinnedItems = user.pinnedItems.edges.map((edge) => edge.node)
   const posts = await getAllFilesFrontMatter('blog')
 
-  return {
-    props: {
-      pinnedItems, posts
-    },
-  }
+  return { props: { posts } }
 }
-
 
 export default function Home({ posts }) {
   return (
@@ -149,28 +97,6 @@ export default function Home({ posts }) {
           <NewsletterForm />
         </div>
       )}
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{''}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          {pinnedItems.map((item) => {
-            return (
-              <a key={item.id} href={item.url} className={styles.card}>
-                <h2>{item.name}</h2>
-                <p>⭐ {item.stargazers.totalCount}</p>
-              </a>
-            )
-          })}
-        </div>
-      </main>
     </>
   )
 }
-
