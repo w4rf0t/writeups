@@ -20,15 +20,15 @@ export async function getStaticProps() {
       headers: {
         ...headers,
         authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
-      }
+      },
     }
   })
 
   const client = new ApolloClient({
     link: authLink.concat(httpLink),
-    cache: new InMemoryCache()
+    cache: new InMemoryCache(),
   })
-  
+
   const posts = await getAllFilesFrontMatter('blog')
 
   return { props: { posts } }
