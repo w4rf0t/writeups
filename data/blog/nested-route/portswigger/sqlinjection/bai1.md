@@ -5,7 +5,7 @@
 **[2. 
 SQL injection vulnerability allowing login bypass](https://0a2f005e035cd61dc2e61bea0045002e.web-security-academy.net/login)**
 
-
+![image](https://user-images.githubusercontent.com/61643034/209037070-e5b60413-e259-47d7-9a2d-28b3c433fc0f.png)
 
 **[]()**
 
