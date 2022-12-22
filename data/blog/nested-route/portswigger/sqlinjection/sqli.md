@@ -1,14 +1,19 @@
-**[1. SQL injection vulnerability in WHERE clause allowing retrieval of hidden data](https://0a6d001204158687c35a814e00590001.web-security-academy.net/)**
+# [1.SQL injection vulnerability in WHERE clause allowing retrieval of hidden data](https://0a6d001204158687c35a814e00590001.web-security-academy.net/)
 
-- Ta thấy lệnh ```filer?``` sẽ truy xuất dữ liệu. Dùng ```filter?category=Pets'+or+1=1--'``` sẽ hiện ra toàn bộ thông tin sản phẩm.
+- Ta thấy lệnh ```filter?``` sẽ truy xuất dữ liệu. Dùng ```filter?category=Pets'+or+1=1--'``` sẽ hiện ra toàn bộ thông tin sản phẩm.
 
-**[2. 
-SQL injection vulnerability allowing login bypass](https://0a2f005e035cd61dc2e61bea0045002e.web-security-academy.net/login)**
+# [2.SQL injection vulnerability allowing login bypass](https://0a2f005e035cd61dc2e61bea0045002e.web-security-academy.net/login)
 
 ![image](https://user-images.githubusercontent.com/61643034/209037070-e5b60413-e259-47d7-9a2d-28b3c433fc0f.png)
 
-**[3. 
-SQL injection with filter bypass via XML encoding](https://portswigger.net/web-security/sql-injection/lab-sql-injection-with-filter-bypass-via-xml-encoding)**
+# [3.SQL injection UNION attacks]()
+
+**[3.1.SQL injection UNION attack, determining the number of columns returned by the query](https://portswigger.net/web-security/sql-injection/union-attacks/lab-determine-number-of-columns)**
+
+- 
+
+
+# [4.SQL injection with filter bypass via XML encoding](https://portswigger.net/web-security/sql-injection/lab-sql-injection-with-filter-bypass-via-xml-encoding)
 ![image](https://user-images.githubusercontent.com/61643034/209040423-3270052e-3a07-4225-9431-70a5c5d6b9cc.png)
 
 - Truy cập trang web, ở burpsuite, bật interception on
