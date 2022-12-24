@@ -9,7 +9,6 @@
 # [3.SQL injection UNION attacks]()
 
 **[3.1.SQL injection UNION attack, determining the number of columns returned by the query](https://portswigger.net/web-security/sql-injection/union-attacks/lab-determine-number-of-columns)**
-
 - Mục đích của bài này là xác định số trường của query.
 - Theo gợi ý thấy chèn sau category=? 1 đoạn ```'+UNION+SELECT+NULL,NULL--```
 - Kết quả trả về là internal server -> thừa hoặc thiếu số lượng trường trong bảng -> thêm 1 trường vào -> query trở thành ```filter?category=Pets'+UNION+SELECT+NULL,NULL,NULL-- ```
