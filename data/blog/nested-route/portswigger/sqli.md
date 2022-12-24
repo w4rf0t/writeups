@@ -10,8 +10,16 @@
 
 **[3.1.SQL injection UNION attack, determining the number of columns returned by the query](https://portswigger.net/web-security/sql-injection/union-attacks/lab-determine-number-of-columns)**
 
-- 
+- Mục đích của bài này là xác định số trường của query.
+- Theo gợi ý thấy chèn sau category=? 1 đoạn ```'+UNION+SELECT+NULL,NULL--```
+- Kết quả trả về là internal server -> thừa hoặc thiếu số lượng trường trong bảng -> thêm 1 trường vào -> query trở thành ```filter?category=Pets'+UNION+SELECT+NULL,NULL,NULL-- ```
 
+**[3.2.SQL injection UNION attack, finding a column containing text ](https://portswigger.net/web-security/sql-injection/union-attacks/lab-find-column-containing-text)**
+
+- Bài này không chỉ cần xác định số trường của query mà còn cả vị trí của text string nữa.
+- Cùng 1 trang web query nên ta biết chắc query này cũng sẽ có 3 cột
+- Thử payload ```'+UNION+SELECT+'a',NULL,NULL--``` -> màn hình hiện lên bắt nhập string bắt buộc là ```'QCQTlQ'``` -> Enter
+- Vẫn bị lỗi internal server -> thử vị trí của string thành cột 2, hoặc 3 -> ```'+UNION+SELECT+NULL,'QCQTlQ',NULL--``` -> done
 
 # [4.SQL injection with filter bypass via XML encoding](https://portswigger.net/web-security/sql-injection/lab-sql-injection-with-filter-bypass-via-xml-encoding)
 ![image](https://user-images.githubusercontent.com/61643034/209040423-3270052e-3a07-4225-9431-70a5c5d6b9cc.png)
