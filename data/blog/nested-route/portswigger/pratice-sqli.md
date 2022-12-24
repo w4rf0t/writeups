@@ -76,10 +76,10 @@ author: ['default']
 ![image](https://user-images.githubusercontent.com/61643034/209446101-873b06f6-415e-42e4-b36d-0345d5af381e.png)
 - Bây giờ chỉ login vào nữa :> 
 
-**[11.](https://portswigger.net/web-security/sql-injection/examining-the-database/lab-listing-database-contents-oracle)**
+**[11.Blind SQL injection with conditional responses](https://portswigger.net/web-security/sql-injection/blind/lab-conditional-responses)**
 - 
 
-**[16.SQL injection with filter bypass via XML encoding](https://portswigger.net/web-security/sql-injection/lab-sql-injection-with-filter-bypass-via-xml-encoding)
+**[17.SQL injection with filter bypass via XML encoding](https://portswigger.net/web-security/sql-injection/lab-sql-injection-with-filter-bypass-via-xml-encoding)
 ![image](https://user-images.githubusercontent.com/61643034/209040423-3270052e-3a07-4225-9431-70a5c5d6b9cc.png)**
 
 - Truy cập trang web, ở burpsuite, bật interception on
