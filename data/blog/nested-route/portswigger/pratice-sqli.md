@@ -7,13 +7,15 @@ summary: Writeups cua SQL Injection Labs.
 images: ['/static/images/ccna/cisco.jpg']
 author: ['default']
 ---
-# [1.SQL injection vulnerability in WHERE clause allowing retrieval of hidden data](https://0a6d001204158687c35a814e00590001.web-security-academy.net/)
+# [1.SQL injection vulnerability in WHERE clause allowing retrieval of hidden data](https://portswigger.net/web-security/sql-injection/lab-retrieve-hidden-data)
 
 - Ta thấy lệnh ```filter?``` sẽ truy xuất dữ liệu. Dùng ```filter?category=Pets'+or+1=1--'``` sẽ hiện ra toàn bộ thông tin sản phẩm.
 
-# [2.SQL injection vulnerability allowing login bypass](https://0a2f005e035cd61dc2e61bea0045002e.web-security-academy.net/login)
+# [2.SQL injection vulnerability allowing login bypass](https://portswigger.net/web-security/sql-injection/lab-login-bypass)
 
 ![image](https://user-images.githubusercontent.com/61643034/209037070-e5b60413-e259-47d7-9a2d-28b3c433fc0f.png)
+- Sử dụng Burp Suite để chặn và sửa đổi yêu cầu đăng nhập.
+- Sửa đổi tham số, cung cấp cho nó giá trị: ```usernameadministrator'--```
 
 # [3.SQL injection UNION attacks]()
 
@@ -27,6 +29,12 @@ author: ['default']
 - Bài này không chỉ cần xác định số trường của query mà còn cả vị trí của text string nữa.
 - Cùng 1 trang web query nên ta biết chắc query này cũng sẽ có 3 cột
 - Thử payload ```'+UNION+SELECT+'a',NULL,NULL--``` -> màn hình hiện lên bắt nhập string bắt buộc là ```'QCQTlQ'``` -> Enter
+- Vẫn bị lỗi internal server -> thử vị trí của string thành cột 2, hoặc 3 -> ```'+UNION+SELECT+NULL,'QCQTlQ',NULL--``` -> done
+
+**[3.3.SQL injection UNION attack, retrieving data from other tables](https://portswigger.net/web-security/sql-injection/union-attacks/lab-retrieve-data-from-other-tables)**
+
+- Theo mô tả, ta thấy trong database có bảng khác tên là users và bảng này có 2 cột ```username``` và ```password```.
+- Thử payload ```'+UNION+SELECT+'a','a'--``` -> Lăn xuống thấy trả về 2 string ***a***
 - Vẫn bị lỗi internal server -> thử vị trí của string thành cột 2, hoặc 3 -> ```'+UNION+SELECT+NULL,'QCQTlQ',NULL--``` -> done
 
 # [4.SQL injection with filter bypass via XML encoding](https://portswigger.net/web-security/sql-injection/lab-sql-injection-with-filter-bypass-via-xml-encoding)
