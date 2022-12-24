@@ -1,3 +1,12 @@
+---
+title: SQL Injection Labs
+date: '2022-12-24'
+tags: ['porswigger', 'sql', 'injection','sqlinjection']
+draft: false
+summary: Writeups cua SQL Injection Labs.
+images: ['/static/images/ccna/cisco.jpg']
+author: ['default']
+---
 # [1.SQL injection vulnerability in WHERE clause allowing retrieval of hidden data](https://0a6d001204158687c35a814e00590001.web-security-academy.net/)
 
 - Ta thấy lệnh ```filter?``` sẽ truy xuất dữ liệu. Dùng ```filter?category=Pets'+or+1=1--'``` sẽ hiện ra toàn bộ thông tin sản phẩm.
