@@ -35,7 +35,11 @@ author: ['default']
 
 - Theo mô tả, ta thấy trong database có bảng khác tên là users và bảng này có 2 cột ```username``` và ```password```.
 - Thử payload ```'+UNION+SELECT+'a','a'--``` -> Lăn xuống thấy trả về 2 string ***a***
-- Vẫn bị lỗi internal server -> thử vị trí của string thành cột 2, hoặc 3 -> ```'+UNION+SELECT+NULL,'QCQTlQ',NULL--``` -> done
+- Thay thành ```'+UNION+SELECT+'username','password'--```
+- Màn hình sẽ show ra nhiều hàng hiển thị nhiều tài khoản -> lọc lại thấy có tài khoản ```administrator```
+![image](https://user-images.githubusercontent.com/61643034/209432735-55ce8a1f-04e6-4e5b-8a47-04a90503dbaf.png)
+ 
+ -> Click vào trang login -> nhập username và password và -> done
 
 # [4.SQL injection with filter bypass via XML encoding](https://portswigger.net/web-security/sql-injection/lab-sql-injection-with-filter-bypass-via-xml-encoding)
 ![image](https://user-images.githubusercontent.com/61643034/209040423-3270052e-3a07-4225-9431-70a5c5d6b9cc.png)
