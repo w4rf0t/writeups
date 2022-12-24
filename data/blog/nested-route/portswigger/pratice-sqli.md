@@ -34,10 +34,10 @@ author: ['default']
 
 - Truy cập trang web, ở burpsuite, bật interception on
 - Bấm vào ```check``` -> vào check request trả về
-- Trong request có trường storeID -> sửa thành ```1+1``` -> trả về 144 unit -> bằng với storeID=2
-- Nhập 1 lệnh attack vào giữa cặp <storeID> -> trả về attack detected -> bị block
+- Trong request có trường ```storeID``` -> sửa thành ```1+1``` -> trả về 144 unit -> bằng với storeID=2
+- Nhập 1 lệnh attack vào giữa cặp ```<storeID>``` -> trả về attack detected -> bị block
   ![image](https://user-images.githubusercontent.com/61643034/209041177-ab4fe22c-2342-451b-aa22-872c072242b4.png)
-- Bây giờ vào extension -> cài Hackvertor -> vào encode -> dec_entries -> dán ```<@dec_entities>1 UNION SELECT username || '~' || password FROM users<@/dec_entities>``` vào được output -> copy thả lại vào cặp thẻ <storeID>. Và bbooms
+- Bây giờ vào extension -> cài Hackvertor -> vào encode -> dec_entries -> dán ```<@dec_entities>1 UNION SELECT username || '~' || password FROM users<@/dec_entities>``` vào được output -> copy thả lại vào cặp thẻ ```<storeID>```. Và bbooms
 ![image](https://user-images.githubusercontent.com/61643034/209042766-d1661308-9cbb-42c4-9651-58ebde6e0c14.png)
 
 **[]()**
