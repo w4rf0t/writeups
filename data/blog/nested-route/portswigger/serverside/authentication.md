@@ -65,3 +65,12 @@ hoặc dùng code dưới đây cho chắc chắn
      ```
 - Sau khi bruteforce, tìm ra pass là ```trustno1```. Ở resource pool mình cũng đã phải đổi thành 1 request 1s để tránh bị quá tải và chạy sai kết quả
 ![image](https://user-images.githubusercontent.com/61643034/209460872-569259b9-2a16-455b-bb5a-22f118b09646.png)
+
+**[6.Username enumeration via account lock](https://portswigger.net/web-security/authentication/password-based/lab-username-enumeration-via-account-lock)**
+
+- Với bài này thì ta sẽ sử dụng bruteforce và clusterbombs và null payloads
+- Đầu tiên bruteforce để tìm username 
+![image](https://user-images.githubusercontent.com/61643034/209461268-255b6e86-1738-4a8f-902c-7294f4273f81.png)
+- và sau khi có tài khoản rồi, mình sẽ brutefore mật khẩu 
+![image](https://user-images.githubusercontent.com/61643034/209461406-43b30eac-cdb7-4da5-b1e4-e11b6ac2ecd8.png)
+- Tài khoản và mật khẩu lần lượt là ```ec2-user``` và ```computer```
