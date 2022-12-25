@@ -75,13 +75,13 @@ hoặc dùng code dưới đây cho chắc chắn
 ![image](https://user-images.githubusercontent.com/61643034/209461406-43b30eac-cdb7-4da5-b1e4-e11b6ac2ecd8.png)
 - Tài khoản và mật khẩu lần lượt là ```ec2-user``` và ```computer```
 
-**[7.Username enumeration via account lock](https://portswigger.net/web-security/authentication/password-based/lab-username-enumeration-via-account-lock)**
+**[7.2FA broken logic](https://portswigger.net/web-security/authentication/multi-factor/lab-2fa-broken-logic)**
 
 - Tương tự bài 2, mình phải login vào tài khoản của ```weiner``` trước rồi sau đó verify cho ```carlos``` sau. -> Nhập verify code trong mail của ```weiner```
 - Trong burpsuite, tab proxy, mở HTTP History -> ```/login2```. Tại đây ta thấy trong request có ```verify=wiener``` , mình sẽ sửa nó thành ```verify=carlos``` rồi ném qua ***Repeater***. 
-![image](https://user-images.githubusercontent.com/61643034/209463521-a7940ef4-8943-4128-8586-69f4318847cf.png)
+ ![image](https://user-images.githubusercontent.com/61643034/209463521-a7940ef4-8943-4128-8586-69f4318847cf.png)
 - Vì mã này chỉ dùng được 1 lần cho tài khoản weiner nên mình quyết định sẽ bruteforce nó
-![image](https://user-images.githubusercontent.com/61643034/209462323-7afb591d-b44a-41d6-8bd3-852e61f5f289.png)
-- Ở ```mfa-code``` ta thấy chỉ có số có 4 chữ số, nên set payload 4 chữ số luôn :>
-![image](https://user-images.githubusercontent.com/61643034/209464024-59462090-1ddc-4b93-9d7c-51bb497581aa.png)
-- Sau đó chèn payload ```mfa-code=0905``` vào cuối request -> open respone in browser -> done <tại mình send payload nó hiện 302 nhưng không hiện solved> 
+ ![image](https://user-images.githubusercontent.com/61643034/209462323-7afb591d-b44a-41d6-8bd3-852e61f5f289.png)
+- Ở ```mfa-code``` ta thấy chỉ có số có 4 chữ số, nên set payload 4 chữ số luôn :)
+ ![image](https://user-images.githubusercontent.com/61643034/209464024-59462090-1ddc-4b93-9d7c-51bb497581aa.png)
+- Sau đó chèn payload ```mfa-code=0905``` vào cuối request -> open respone in browser -> done
