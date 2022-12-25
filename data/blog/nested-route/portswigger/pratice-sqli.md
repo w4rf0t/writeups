@@ -87,7 +87,7 @@ author: ['default']
 **[13.Blind SQL injection with time delays](https://portswigger.net/web-security/sql-injection/blind/lab-conditional-responses)**
 - Theo gợi ý, mình sẽ chỉnh sửa phần TrackingID với payload trong repeater ```TrackingId=x'||pg_sleep(10)--``` -> send -> done 🫀
 
-**[Bài 12 và 14 làm tương tự các bước bài 11+13]
+**[Bài 12 và 14 làm tương tự các bước bài 11+13]()**
 
 **[17.SQL injection with filter bypass via XML encoding](https://portswigger.net/web-security/sql-injection/lab-sql-injection-with-filter-bypass-via-xml-encoding)
 ![image](https://user-images.githubusercontent.com/61643034/209040423-3270052e-3a07-4225-9431-70a5c5d6b9cc.png)**
