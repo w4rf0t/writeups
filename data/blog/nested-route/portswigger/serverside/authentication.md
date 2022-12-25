@@ -91,6 +91,6 @@ hoặc dùng code dưới đây cho chắc chắn
 - Với bài này thì biết là dùng ***logged-in-cookie***, nhưng mình đã bruteforce như bài 5 🥲 Tất nhiên nó là hướng đi sai lầm.
 - Sau khi xem gợi ý. Việc chúng ta cần làm chỉ là bruteforce ***logged-in-cookie*** mà thôi. Decode từ base64 ra thì thấy nó được viết dưới định dạng ```username:md5hash(password)```. Ok =)))) vậy giờ vào việc chính thôi.
 - Ở tuỳ chọn payload proccessing, mình chọn ```hash md5, prefix=carlos:, encode bas64```
- ![image](https://user-images.githubusercontent.com/61643034/209465903-89b9a34a-84fa-4a66-84ce-d0bd7c11235b.png)
+ ![image](https://user-images.githubusercontent.com/61643034/209466235-0b3d75c1-2c23-4074-ae7e-4d79fc4a94a6.png)
 - Giờ vào [Crack Station](https://crackstation.net/) để crack md5 nào -> thu được mật khẩu là ```123qwe```
 - Login -> done
