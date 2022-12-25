@@ -1,6 +1,6 @@
 ---
 title: Authentication Labs
-date: '2022-12-24'
+date: '2022-12-25'
 tags: ['porswigger', 'authentication']
 draft: false
 summary: Writeups cua Authentication Labs.
@@ -30,3 +30,12 @@ author: ['default']
 ![image](https://user-images.githubusercontent.com/61643034/209457422-ee927668-5e24-45d8-9792-b81671cd6f75.png)
 - Đổi username thành ```carlos``` và xoá token đi.
 - Sau đó vào web -> login với username ```carlos``` với password là ```admin``` -> done 🙂
+
+**[4.Username enumeration via subtly different responses](https://portswigger.net/web-security/authentication/password-based/lab-username-enumeration-via-subtly-different-responses)**
+
+- Với bài này thì ta sẽ sử dụng bruteforce -> mà theo tên đề bài quan trọng nhất vẫn là những respone trả về khác nhau
+- Bước đầu tiên, ta sẽ bruteforce username
+- Ở đây ta sẽ sử dụng ***Grep-extract*** để lấy repsone trả về giữa 2 thẻ ```<p class="is-warning">..</p>``` 
+- Sau khi enumarate thẻ username -> thấy respone của user ```asterix``` khônng có dấu `.` ở cuối câu như những respone khác. Mạnh dạn đoán đây chính là username.
+- Bây giờ thử qua bruteforce mật khẩu -> với list mật khẩu có sẵn -> bruteforce thấy password ```biteme``` có respone 302.
+- Vậy là chỉ cần login nữa thôi.
