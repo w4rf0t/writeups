@@ -85,3 +85,12 @@ hoặc dùng code dưới đây cho chắc chắn
 - Ở ```mfa-code``` ta thấy chỉ có số có 4 chữ số, nên set payload 4 chữ số luôn :)
  ![image](https://user-images.githubusercontent.com/61643034/209464024-59462090-1ddc-4b93-9d7c-51bb497581aa.png)
 - Sau đó chèn payload ```mfa-code=0905``` vào cuối request -> open respone in browser -> done
+
+**[8.Brute-forcing a stay-logged-in cookie](https://portswigger.net/web-security/authentication/other-mechanisms/lab-brute-forcing-a-stay-logged-in-cookie)**
+
+- Với bài này thì biết là dùng ***logged-in-cookie***, nhưng mình đã bruteforce như bài 5 🥲 Tất nhiên nó là hướng đi sai lầm.
+- Sau khi xem gợi ý. Việc chúng ta cần làm chỉ là bruteforce ***logged-in-cookie*** mà thôi. Decode từ base64 ra thì thấy nó được viết dưới định dạng ```username:md5hash(password)```. Ok =)))) vậy giờ vào việc chính thôi.
+- Ở tuỳ chọn payload proccessing, mình chọn ```hash md5, prefix=carlos:, encode bas64```
+ ![image](https://user-images.githubusercontent.com/61643034/209465903-89b9a34a-84fa-4a66-84ce-d0bd7c11235b.png)
+- Giờ vào [Crack Station](https://crackstation.net/) để crack md5 nào -> thu được mật khẩu là ```123qwe```
+- Login -> done
