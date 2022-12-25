@@ -45,7 +45,7 @@ author: ['default']
 - Bài này chỉ có 2 username nên chúng ta chỉ cần brutefore carlos. Tuy nhiên khá là thốn vì nó có giới hạn request số lần ```Invalid password```  và sau đó bắt mình thử lại sau 1 phút. Tất nhiên thì làm gì có chuyện như vậy 🙂.
 - Sau khi tham khảo trên mạng mình đã quyết định sẽ đăng nhập luân phiên giữa 2 account ```wiener:peter``` và ```carlos``` chưa biết mật khẩu.
 - Đây là đoạn code python để generate password để intruder đăng nhập luân phiên. 
-   ```python
+  ```python
       mang=[]
       fhand=open("password.txt","r")
       for line in fhand:
@@ -58,9 +58,10 @@ author: ['default']
     
 - Với account ```wiener``` và ```carlos``` thay phiên. Bây giờ mình sẽ dùng intruder với tuỳ chọn ***PitchFork***. 
 - Lưu ý: ở file password.txt sau khi generate mình sẽ có 200 dòng, nên tương tự bên payload của username mình cũng sẽ để 200 account là ```wiener``` và ```carlos```.
-hoặc dùng code dưới đây cho chắc chắn ```python
-for i in range(100):
-      print("wiener\ncarlos")```
-      
+hoặc dùng code dưới đây cho chắc chắn 
+     ```python
+      for i in range(100):
+            print("wiener\ncarlos")```
+     
 - Sau khi bruteforce, tìm ra pass là ```trustno1```. Ở resource pool mình cũng đã phải đổi thành 1 request 1s để tránh bị quá tải và chạy sai kết quả
 ![image](https://user-images.githubusercontent.com/61643034/209460872-569259b9-2a16-455b-bb5a-22f118b09646.png)
