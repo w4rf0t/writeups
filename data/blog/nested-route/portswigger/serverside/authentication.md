@@ -54,14 +54,14 @@ author: ['default']
             mang.append(line)
       fhand=open("password.txt","w")
       for i in mang:
-            fhand.write(str(i)+"\n")```
-    
+            fhand.write(str(i)+"\n")
+  ```
 - Với account ```wiener``` và ```carlos``` thay phiên. Bây giờ mình sẽ dùng intruder với tuỳ chọn ***PitchFork***. 
 - Lưu ý: ở file password.txt sau khi generate mình sẽ có 200 dòng, nên tương tự bên payload của username mình cũng sẽ để 200 account là ```wiener``` và ```carlos```.
 hoặc dùng code dưới đây cho chắc chắn 
      ```python
       for i in range(100):
-            print("wiener\ncarlos")```
-     
+            print("wiener\ncarlos")
+     ```
 - Sau khi bruteforce, tìm ra pass là ```trustno1```. Ở resource pool mình cũng đã phải đổi thành 1 request 1s để tránh bị quá tải và chạy sai kết quả
 ![image](https://user-images.githubusercontent.com/61643034/209460872-569259b9-2a16-455b-bb5a-22f118b09646.png)
