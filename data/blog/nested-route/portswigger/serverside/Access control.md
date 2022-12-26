@@ -43,3 +43,14 @@ author: ['default']
 - Copy ```session``` của wiener -> thay thế session của administrator hồi nãy.
 - Lần đầu sẽ bị hiện "Unauthorized" -> thay method ```POST``` thành ```POSTX``` -> ```missing parameter username``` .
 - Change request method và đổi tên username thành wiener là done. 🙂
+
+**[7.User ID controlled by request parameter](https://portswigger.net/web-security/access-control/lab-user-id-controlled-by-request-parameter)**
+
+- Bài này sau khi login tài khoản ```wiener:peter``` vào trong ```/my-account```. 
+- Tại response ```Get /my-account``` trong HTTP history ta thấy có ```href=/my-account?id=wiener```.
+- Thử ném sang ***Repeater*** -> thay id thành ```carlos``` -> hiện ra API của carlos.
+
+**[8.User ID controlled by request parameter, with unpredictable user IDs](https://portswigger.net/web-security/access-control/lab-user-id-controlled-by-request-parameter-with-unpredictable-user-ids)**
+
+- Tương tự bài 7, chỉ là ta thấy ```id``` không đưojc đặt theo username nữa mà là 1 chuỗi string.
+- Vào blog kiếm 1 bài đọc thấy được viết bởi ***carlos*** , sau đó mình đã copy id của carlos và dán vào ```GET /my-account?id=``` trong request được ném qua repeater tương tự bài trước. -> done
