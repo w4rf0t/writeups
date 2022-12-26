@@ -1,6 +1,6 @@
 ---
 title: Access control
-date: '2022-12-25'
+date: '2022-12-26'
 tags: ['porswigger', 'control', 'access']
 draft: false
 summary: Writeups cua Access Control.
