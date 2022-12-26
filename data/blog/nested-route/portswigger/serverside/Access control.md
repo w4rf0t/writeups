@@ -7,6 +7,17 @@ summary: Writeups cua Access Control.
 author: ['default']
 ---
 
+**[1.Unprotected admin functionality](https://portswigger.net/web-security/access-control/lab-unprotected-admin-functionality)**
+
+- Theo gợi ý, ta vào ```robots.txt``` thấy có ```disallơw: /administrator-panel``` -> truy cập vào đây rồi xoá user carlos đi là xong
+
+**[2.Unprotected admin functionality with unpredictable URL](https://portswigger.net/web-security/access-control/lab-unprotected-admin-functionality-with-unpredictable-url)**
+
+- Bài này khi truy cập thì ```Crl+U``` đọc ***sourcecode*** 
+ ![image](https://user-images.githubusercontent.com/61643034/209528459-9867ff01-2239-47e0-9ecb-278b2b412c07.png)
+- Đoạn code này sẽ kiểm tra nếu người dùng là admin thì sẽ tạo 1 tag mới ở menu header có ```href=/admin-l9dcq4```
+- 
+
 **[3.User role controlled by request parameter](https://portswigger.net/web-security/access-control/lab-user-role-controlled-by-request-parameter)**
 
 - Trong bài này, sau khi đăng nhập, ta thấy ở cookie luôn có một parameter ```Admin=false```. 
