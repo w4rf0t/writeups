@@ -91,4 +91,4 @@ author: ['default']
 
 **[13.Referer-based access control](https://portswigger.net/web-security/access-control/lab-referer-based-access-control)**
 
-- Không khác gì bài 7
+- Không khác gì bài 12
