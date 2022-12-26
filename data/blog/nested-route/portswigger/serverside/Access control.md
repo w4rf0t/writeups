@@ -63,4 +63,11 @@ author: ['default']
 - Login với account ```wiener:peter```. Click luôn vào update password.
 - Vào ```HTTP History``` tìm request ```GET /my-account?id=wiener```. -> ném vào ***Repeater*** -> đổi id trong request thành ```administrator```.
 - Trong respone trả về, ta thấy có thẻ ```<input class="password" value=...>``` (Mình không nhớ nhưng mà nó là mật khẩu của administrator 🥲) 
-- Logi với tài khoản admin -> vào ***Admin Panel***
+- Login với tài khoản admin -> vào ***Admin Panel***
+
+**[11.Insecure direct object references](https://portswigger.net/web-security/access-control/lab-insecure-direct-object-references)**
+
+- Bài này mình vào live chat -> gõ đại gì đấy -> ```View transcript```  -> thấy file ```2.txt``` được tải về.
+- Vào HTTP History, kiếm ```GET /download-transcript/2.txt``` -> ném qua repeater -> thay 2->1.
+- Sau khi tải về đọc lại nội dung của đoạn chat là có mật khẩu trong đấy.
+
