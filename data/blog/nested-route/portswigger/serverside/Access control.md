@@ -53,3 +53,14 @@ author: ['default']
 
 - Tương tự bài 7, chỉ là ta thấy ```id``` không đưojc đặt theo username nữa mà là 1 chuỗi string.
 - Vào blog kiếm 1 bài đọc thấy được viết bởi ***carlos*** , sau đó mình đã copy id của carlos và dán vào ```GET /my-account?id=``` trong request được ném qua repeater tương tự bài trước. -> done
+
+**[9.User ID controlled by request parameter with data leakage in redirect]()**
+
+- Không khác gì bài 7
+
+**[10.User ID controlled by request parameter with password disclosure](https://portswigger.net/web-security/access-control/lab-user-id-controlled-by-request-parameter-with-password-disclosure)**
+
+- Login với account ```wiener:peter```. Click luôn vào update password.
+- Vào ```HTTP History``` tìm request ```GET /my-account?id=wiener```. -> ném vào ***Repeater*** -> đổi id trong request thành ```administrator```.
+- Trong respone trả về, ta thấy có thẻ ```<input class="password" value=...>``` (Mình không nhớ nhưng mà nó là mật khẩu của administrator 🥲) 
+- 
