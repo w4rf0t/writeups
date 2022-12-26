@@ -63,4 +63,4 @@ author: ['default']
 - Login với account ```wiener:peter```. Click luôn vào update password.
 - Vào ```HTTP History``` tìm request ```GET /my-account?id=wiener```. -> ném vào ***Repeater*** -> đổi id trong request thành ```administrator```.
 - Trong respone trả về, ta thấy có thẻ ```<input class="password" value=...>``` (Mình không nhớ nhưng mà nó là mật khẩu của administrator 🥲) 
-- 
+- Logi với tài khoản admin -> vào ***Admin Panel***
