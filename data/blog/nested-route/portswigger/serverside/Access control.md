@@ -68,6 +68,12 @@ author: ['default']
 **[11.Insecure direct object references](https://portswigger.net/web-security/access-control/lab-insecure-direct-object-references)**
 
 - Bài này mình vào live chat -> gõ đại gì đấy -> ```View transcript```  -> thấy file ```2.txt``` được tải về.
-- Vào HTTP History, kiếm ```GET /download-transcript/2.txt``` -> ném qua repeater -> thay 2->1.
+- Vào HTTP History, kiếm ```GET /download-transcript/2.txt``` -> ném qua repeater rồi thay ***2->1.***
 - Sau khi tải về đọc lại nội dung của đoạn chat là có mật khẩu trong đấy.
 
+**[12.Multi-step process with no access control on one step](https://portswigger.net/web-security/access-control/lab-multi-step-process-with-no-access-control-on-one-step)**
+
+- Đầu tiên login bằng tài khoản admin -> upgrade quyền cho carlos -> logout ra.
+- Ném cái request này ở ***HTTP History*** sang Repeater.
+- Bây giờ login vào tài khoản ```wiener:peter``` -> vào HTTP History lấy session của wiener ra -> ném qua request ở Repeater hồi nãy + đổi ```username=carlos``` thành ```username=wiener```.
+- 
