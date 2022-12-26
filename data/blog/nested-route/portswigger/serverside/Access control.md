@@ -76,4 +76,8 @@ author: ['default']
 - Đầu tiên login bằng tài khoản admin -> upgrade quyền cho carlos -> logout ra.
 - Ném cái request này ở ***HTTP History*** sang Repeater.
 - Bây giờ login vào tài khoản ```wiener:peter``` -> vào HTTP History lấy session của wiener ra -> ném qua request ở Repeater hồi nãy + đổi ```username=carlos``` thành ```username=wiener```.
-- 
+- Bấm send và done.
+
+**[13.Referer-based access control](https://portswigger.net/web-security/access-control/lab-referer-based-access-control)**
+
+- Không khác gì bài 7
