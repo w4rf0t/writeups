@@ -41,5 +41,5 @@ author: ['default']
 - Bài này sẽ update quyền của wiener thông qua request của admin sau khi update quyền của carlos.
 - Đầu tiên,ném request admin up quyền cho carlos qua Repeater, sau đấy logout ra -> đăng nhập bằng tài khoản wiener.
 - Copy ```session``` của wiener -> thay thế session của administrator hồi nãy.
-- Lần đầu sẽ bị hiện "Unauthorized" -> thay method ```POST``` thành ```POSTX``` -> missing parameter username``` .
+- Lần đầu sẽ bị hiện "Unauthorized" -> thay method ```POST``` thành ```POSTX``` -> ```missing parameter username``` .
 - Change request method và đổi tên username thành wiener là done. 🙂
